@@ -72,3 +72,33 @@ Modify crew settings:
 - `max_retry_limit`: Number of retry attempts
 
 ## 📁 Project Structure
+coder/
+├── src/coder/
+│   ├── main.py
+│   ├── crew.py
+│   ├── config/
+│   │   ├── agents.yaml
+│   │   └── tasks.yaml
+│   └── tools/
+├── knowledge/
+├── output/
+└── pyproject.toml
+
+## Usage
+
+Run from project root:
+crewai run
+
+Default assignment calculates the first 10,000 terms of the series 1 - 1/3 + 1/5 - 1/7 + ... multiplied by 4.
+
+Configuration
+Agents: src/coder/config/agents.yaml
+Tasks: src/coder/config/tasks.yaml
+Assignment: Edit src/coder/main.py
+Crew settings: src/coder/crew.py
+
+## Output
+Generated code and results are saved to output/code_and_output.txt.
+
+## Technologies
+CrewAI, Python, Docker, Gradio, OpenAI GPT-4o-mini
